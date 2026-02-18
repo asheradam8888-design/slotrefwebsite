@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login - Casino Gaming Hub</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="admin-login-container">
+    <h1>Admin Login</h1>
+
+    <% if (error) { %>
+      <p class="error-msg"><%= error %></p>
+    <% } %>
+
+    <form method="POST" action="/admin/login" class="admin-form">
+      <input type="password" name="password" placeholder="Enter admin password" required>
+      <button type="submit" class="player-btn">Login</button>
+    </form>
+  </div>
+</body>
+</html>

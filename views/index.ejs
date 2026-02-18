@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Casino Gaming Hub</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="lux-bg"></div>
+<div class="overlay"></div>
+
+<header class="top-header">
+  <img src="/logo.png" class="main-logo">
+  <div>
+    <h1>CASINO GAMING HUB</h1>
+    <p class="subtitle">Exclusive Gaming Partnerships • Premium Access</p>
+  </div>
+</header>
+
+<section class="hero-description">
+  <h2>Step Into the World of Elite Casinos</h2>
+  <p>
+    Casino Gaming Hub connects high-value players and professional agents
+    with premium online casino platforms. Enjoy top-tier bonuses, elite rewards,
+    and the most trusted gaming experiences in the industry.
+  </p>
+</section>
+
+<div class="layout">
+  <div class="left-container">
+
+    <% if (links.length === 0) { %>
+      <div class="empty-box">No casinos added yet.</div>
+    <% } %>
+
+    <% links.forEach(link => { %>
+      <div class="casino-card">
+
+        <div class="card-header">
+          <img src="<%= link.logo %>" class="casino-logo-large">
+
+          <div class="casino-info">
+            <h2><%= link.name %></h2>
+            <p><%= link.description %></p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="btn-group">
+          <a href="<%= link.playerUrl %>" target="_blank" class="player-btn">
+            🎰 Register as Player
+          </a>
+
+          <a href="<%= link.agentUrl %>" target="_blank" class="agent-btn">
+            💼 Register as Agent
+          </a>
+        </div>
+
+      </div>
+    <% }) %>
+
+  </div>
+</div>
+
+<footer class="footer">
+  © 2026 Casino Gaming Hub • Premium Gaming Network
+</footer>
+
+</body>
+</html>

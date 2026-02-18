@@ -1,0 +1,15 @@
+[
+  {
+    "name": "stake",
+    "url": "stake.com",
+    "description": "this is stake",
+    "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStake_%2528online_casino%2529&psig=AOvVaw0eKcDmjv83EdHmCeeKr_BD&ust=1771331140169000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOD96-yA3pIDFQAAAAAdAAAAABAE"
+  },
+  {
+    "name": "TEST",
+    "logo": "youtube.com",
+    "description": "its a test",
+    "playerUrl": "youtube.com",
+    "agentUrl": "youtube.com"
+  }
+]

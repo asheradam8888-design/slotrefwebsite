@@ -1,0 +1,739 @@
+/* ===== GLOBAL ===== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff9e6;
+  background: #0c0c0c;
+  overflow-x: hidden;
+}
+
+/* Background glow and subtle luxury effect */
+.lux-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255,215,0,0.1), transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(255,215,0,0.08), transparent 40%),
+    linear-gradient(160deg, #0c0c0c, #1a1a1a 80%);
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* ===== HEADER ===== */
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px 30px;
+}
+
+.main-logo {
+  width: 130px;
+}
+
+h1 {
+  font-size: 44px;
+  letter-spacing: 4px;
+  margin: 0;
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255,215,0,0.7);
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #fff2cc;
+  font-size: 16px;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero-description {
+  max-width: 900px;
+  margin: 20px auto 60px;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(30,30,30,0.95), rgba(20,20,20,0.95));
+  border-radius: 25px;
+  border: 1px solid rgba(255,215,0,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+.hero-description h2 {
+  color: #ffd700;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.hero-description p {
+  color: #f8f5e6;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+/* ===== LAYOUT ===== */
+
+.layout {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 80px 80px;
+}
+
+.left-container {
+  width: 850px;
+  max-width: 100%;
+}
+
+/* ===== CASINO CARD ===== */
+
+.casino-card {
+  background: linear-gradient(145deg, rgba(30,30,30,0.95), rgba(15,15,15,0.95));
+  border-radius: 30px;
+  padding: 35px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255,215,0,0.25);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  transition: all 0.4s ease;
+}
+
+.casino-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 100px rgba(255,215,0,0.35);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.casino-logo-large {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background: rgba(255,215,0,0.08);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.casino-info h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  color: #ffd700;
+}
+
+.casino-info p {
+  margin: 0;
+  color: #f8f5e6;
+  font-size: 15px;
+}
+
+/* Divider */
+.divider {
+  margin: 25px 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ffd700, transparent);
+}
+
+/* ===== BUTTONS ===== */
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.player-btn, .agent-btn {
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.player-btn {
+  background: linear-gradient(45deg, #ffd700, #ffec99);
+  color: #000;
+}
+
+.player-btn:hover {
+  box-shadow: 0 0 25px #ffd700;
+  transform: scale(1.05);
+}
+
+.agent-btn {
+  background: linear-gradient(45deg, #b8860b, #ffd700);
+  color: #000;
+}
+
+.agent-btn:hover {
+  box-shadow: 0 0 25px #ffd700;
+  transform: scale(1.05);
+}
+
+/* ===== EMPTY ===== */
+
+.empty-box {
+  padding: 30px;
+  background: rgba(50,50,50,0.6);
+  border-radius: 20px;
+  text-align: center;
+  color: #ffec99;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(15,15,15,0.9);
+  color: #ffd700;
+  font-size: 14px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .layout {
+    padding: 0 20px 60px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .casino-logo-large {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
+
+
+
+
+
+/* ===== ADMIN PANEL ===== */
+
+.admin-panel {
+  max-width: 800px;
+  margin: 50px auto;
+  background: linear-gradient(145deg, rgba(30,30,30,0.95), rgba(20,20,20,0.95));
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(255,215,0,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  color: #fff9e6;
+}
+
+.admin-panel h1 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ffd700;
+  background: rgba(0,0,0,0.6);
+  color: #fff9e6;
+  font-size: 14px;
+}
+
+.admin-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  text-align: center;
+}
+
+.success-msg {
+  color: #ffd700;
+  text-align: center;
+}
+
+.admin-form button {
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ffd700, #ffec99);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.admin-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffd700;
+}
+
+.admin-panel ul {
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.admin-panel li {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== ADMIN PANEL ===== */
+
+.admin-panel {
+  max-width: 900px;
+  margin: 50px auto;
+  background: linear-gradient(145deg, rgba(30,30,30,0.95), rgba(20,20,20,0.95));
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(255,215,0,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  color: #fff9e6;
+}
+
+.admin-panel h1 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ffd700;
+  background: rgba(0,0,0,0.6);
+  color: #fff9e6;
+  font-size: 14px;
+}
+
+.admin-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  text-align: center;
+}
+
+.success-msg {
+  color: #ffd700;
+  text-align: center;
+}
+
+.admin-form button {
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ffd700, #ffec99);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.admin-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffd700;
+}
+
+.admin-panel ul {
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.admin-panel li {
+  margin-bottom: 10px;
+}
+
+
+.admin-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.inline-form input[type="text"] {
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ffd700;
+  background: rgba(0,0,0,0.6);
+  color: #fff9e6;
+  margin-right: 5px;
+}
+
+.inline-form button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.inline-form .edit-btn {
+  background: linear-gradient(45deg, #ffd700, #ffec99);
+}
+
+.inline-form .edit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffd700;
+}
+
+.inline-form .delete-btn {
+  background: linear-gradient(45deg, #ff4d4d, #ff9999);
+}
+
+.inline-form .delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff4d4d;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Admin panel main container */
+.admin-panel {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(35,35,35,0.95));
+  border-radius: 25px;
+  border: 1px solid rgba(255,215,0,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  color: #fff9e6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Titles */
+.admin-panel h1, .admin-panel h2 {
+  text-align: center;
+  color: #ffd700;
+}
+
+/* Add casino form */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ffd700;
+  background: rgba(0,0,0,0.6);
+  color: #fff9e6;
+}
+
+.admin-form textarea {
+  min-height: 60px;
+}
+
+.player-btn {
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ffd700, #ffec99);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.player-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffd700;
+}
+
+/* Success / error messages */
+.success-msg { color: #ffd700; text-align: center; }
+.error-msg { color: #ff4d4d; text-align: center; }
+
+/* Casino cards container */
+.casino-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Individual card */
+.casino-card {
+  background: rgba(0,0,0,0.7);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255,215,0,0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.casino-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255,215,0,0.5);
+}
+
+.casino-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Card actions */
+.card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.inline-form button {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inline-form .edit-btn {
+  background: linear-gradient(45deg, #ffd700, #ffec99);
+  color: #000;
+}
+
+.inline-form .edit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffd700;
+}
+
+.inline-form .delete-btn {
+  background: linear-gradient(45deg, #ff4d4d, #ff9999);
+  color: #000;
+}
+
+.inline-form .delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff4d4d;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .casino-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+/* Admin Panel Container */
+.admin-panel {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(35,35,35,0.95));
+  border-radius: 25px;
+  border: 1px solid rgba(255,215,0,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  color: #fff9e6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-panel h1, .admin-panel h2 { text-align: center; color: #ffd700; }
+
+/* Add casino form */
+.admin-form { display: flex; flex-direction: column; gap: 15px; background: rgba(0,0,0,0.6); padding: 20px; border-radius: 20px; margin-bottom: 30px; }
+.admin-form input, .admin-form textarea { padding: 12px; border-radius: 10px; border: 1px solid #ffd700; background: rgba(0,0,0,0.6); color: #fff9e6; }
+.admin-form textarea { min-height: 60px; }
+.player-btn { padding: 14px; border-radius: 50px; border: none; font-weight: bold; cursor: pointer; background: linear-gradient(45deg, #ffd700, #ffec99); color: #000; transition: all 0.3s ease; }
+.player-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px #ffd700; }
+
+/* Messages */
+.success-msg { color: #ffd700; text-align: center; font-weight: bold; }
+.error-msg { color: #ff4d4d; text-align: center; font-weight: bold; }
+
+/* Casino cards */
+.casino-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.casino-card { background: rgba(0,0,0,0.7); border-radius: 20px; padding: 20px; text-align: center; border: 1px solid rgba(255,215,0,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s; }
+.casino-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(255,215,0,0.5); }
+.casino-logo { width: 80px; height: 80px; object-fit: contain; margin-bottom: 10px; }
+
+/* Card actions */
+.card-actions { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
+.card-actions .edit-btn { background: linear-gradient(45deg, #ffd700, #ffec99); padding: 6px 12px; border-radius: 20px; border: none; cursor: pointer; }
+.card-actions .delete-btn { background: linear-gradient(45deg, #ff4d4d, #ff9999); padding: 6px 12px; border-radius: 20px; border: none; cursor: pointer; }
+
+/* Modal */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7); }
+.modal-content { background: rgba(0,0,0,0.95); margin: 10% auto; padding: 20px; border: 1px solid #ffd700; border-radius: 20px; max-width: 400px; }
+.close { color: #ffd700; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+
+/* Mobile */
+@media (max-width: 600px) { .casino-cards { grid-template-columns: 1fr; } }
+
+
+
+
+
+
+
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal content */
+.modal-content {
+  background: rgba(0,0,0,0.95);
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #ffd700;
+  border-radius: 20px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  color: #ffd700;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Modal buttons */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-actions .delete-btn {
+  background: linear-gradient(45deg, #ff4d4d, #ff9999);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions .cancel-btn {
+  background: linear-gradient(45deg, #999999, #cccccc);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* Full-page background image */
+.lux-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/background.png') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2; /* behind everything */
+}
+
+/* Optional overlay for readability */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* dark overlay for text/card contrast */
+  z-index: -1;
+}

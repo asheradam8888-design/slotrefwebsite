@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - Casino Gaming Hub</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="admin-panel">
+    <h1>Admin Panel</h1>
+
+    <% if (typeof success !== 'undefined' && success) { %>
+      <p class="success-msg" id="success-msg"><%= success %></p>
+    <% } %>
+
+    <div class="add-casino-container">
+      <h2>Add New Casino</h2>
+      <form method="POST" action="/admin/add" class="admin-form">
+        <input type="text" name="name" placeholder="Casino Name" required>
+        <input type="text" name="logo" placeholder="Logo URL" required>
+        <textarea name="description" placeholder="Description" required></textarea>
+        <input type="text" name="playerUrl" placeholder="Player Link" required>
+        <input type="text" name="agentUrl" placeholder="Agent Link" required>
+        <button type="submit" class="player-btn">Add Casino</button>
+      </form>
+    </div>
+
+    <h2>Current Casinos</h2>
+    <div class="casino-cards">
+      <% if (typeof links !== 'undefined' && links.length > 0) { %>
+        <% links.forEach((link, index) => { %>
+          <div class="casino-card">
+            <img src="<%= link.logo %>" alt="<%= link.name %> Logo" class="casino-logo">
+            <h3><%= link.name %></h3>
+            <p><%= link.description %></p>
+            <p><strong>Player:</strong> <a href="<%= link.playerUrl %>" target="_blank">Link</a></p>
+            <p><strong>Agent:</strong> <a href="<%= link.agentUrl %>" target="_blank">Link</a></p>
+
+            <div class="card-actions">
+              <button class="edit-btn" onclick="openEditModal(<%= index %>)">Edit</button>
+              <button class="delete-btn" onclick="openDeleteModal(<%= index %>)">Delete</button>
+            </div>
+          </div>
+
+          <!-- EDIT MODAL -->
+          <div class="modal" id="edit-modal-<%= index %>">
+            <div class="modal-content">
+              <span class="close" onclick="closeEditModal(<%= index %>)">&times;</span>
+              <h3>Edit Casino</h3>
+              <form method="POST" action="/admin/edit" class="admin-form">
+                <input type="hidden" name="index" value="<%= index %>">
+                <input type="text" name="name" value="<%= link.name %>" required>
+                <input type="text" name="logo" value="<%= link.logo %>" required>
+                <input type="text" name="description" value="<%= link.description %>" required>
+                <input type="text" name="playerUrl" value="<%= link.playerUrl %>" required>
+                <input type="text" name="agentUrl" value="<%= link.agentUrl %>" required>
+                <button type="submit" class="player-btn">Save Changes</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- DELETE MODAL -->
+          <div class="modal" id="delete-modal-<%= index %>">
+            <div class="modal-content">
+              <h3>Confirm Delete</h3>
+              <p>Are you sure you want to delete "<%= link.name %>"?</p>
+              <div class="modal-actions">
+                <form method="POST" action="/admin/delete">
+                  <input type="hidden" name="index" value="<%= index %>">
+                  <button type="submit" class="delete-btn">Yes, Delete</button>
+                </form>
+                <button class="cancel-btn" onclick="closeDeleteModal(<%= index %>)">Cancel</button>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No casinos added yet.</p>
+      <% } %>
+    </div>
+  </div>
+
+  <script>
+    // Fade out success message
+    window.onload = () => {
+      const msg = document.getElementById('success-msg');
+      if (msg) setTimeout(() => msg.style.display = 'none', 4000);
+    }
+
+    // Edit modal
+    function openEditModal(index) {
+      document.getElementById(`edit-modal-${index}`).style.display = 'block';
+    }
+    function closeEditModal(index) {
+      document.getElementById(`edit-modal-${index}`).style.display = 'none';
+    }
+
+    // Delete modal
+    function openDeleteModal(index) {
+      document.getElementById(`delete-modal-${index}`).style.display = 'block';
+    }
+    function closeDeleteModal(index) {
+      document.getElementById(`delete-modal-${index}`).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
