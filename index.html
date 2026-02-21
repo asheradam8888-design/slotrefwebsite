@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casino Gaming Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="lux-bg"></div>
+  <div class="overlay"></div>
+
+  <header class="top-header">
+    <img src="logo.png" class="main-logo" alt="Casino Gaming Hub logo">
+    <div class="brand-copy">
+      <p class="brand-kicker">Premium Network</p>
+      <h1>Casino Gaming Hub</h1>
+      <p class="subtitle">Exclusive Gaming Partnerships • Premium Access</p>
+    </div>
+    <div class="header-actions">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="sideMenu" type="button">Menu</button>
+    </div>
+  </header>
+
+  <aside class="side-menu" id="sideMenu" aria-hidden="true">
+    <button class="menu-close" id="menuClose" type="button">Close</button>
+    <nav class="menu-links">
+      <a href="#withdraw-deposit">How to Withdraw/Deposit</a>
+      <a href="#casinoContainer">Casinos</a>
+      <a href="#categoryFilters">Categories</a>
+      <a href="#" id="contactLink" rel="noopener noreferrer">Contact Us</a>
+    </nav>
+  </aside>
+  <div class="menu-backdrop" id="menuBackdrop" hidden></div>
+
+  <section class="hero-description">
+    <h2>Step Into the World of Elite Casinos</h2>
+    <p>
+      Casino Gaming Hub connects high-value players and professional agents with trusted casino platforms.
+      Explore by category, pick your preferred route, and register instantly.
+    </p>
+  </section>
+
+  <section class="filters-section">
+    <h3>Browse by Under By</h3>
+    <div id="categoryFilters" class="category-filters"></div>
+  </section>
+
+  <main class="layout">
+    <div class="left-container" id="casinoContainer"></div>
+  </main>
+
+  <section id="withdraw-deposit" class="info-section">
+    <div class="info-card">
+      <h3>How to Withdraw / Deposit</h3>
+      <p>
+        Choose your casino, complete registration, and follow the platform’s wallet instructions.
+        For deposits, select your payment method and confirm. For withdrawals, verify your account
+        and submit a withdrawal request through the casino cashier page.
+      </p>
+      <div class="info-steps">
+        <div>
+          <span class="step-number">1</span>
+          <p>Create an account or log in to your chosen casino.</p>
+        </div>
+        <div>
+          <span class="step-number">2</span>
+          <p>Go to the cashier/wallet page to deposit or withdraw.</p>
+        </div>
+        <div>
+          <span class="step-number">3</span>
+          <p>Confirm details and complete verification if required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">© 2026 Casino Gaming Hub • Premium Gaming Network</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
